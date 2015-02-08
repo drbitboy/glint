@@ -27,3 +27,11 @@ Also needs two SPICE kernels:
     http://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de432s.bsp
 
     - provided
+
+Data source (HDF5 format files of TOMS/EP data):
+
+  http://mirador.gsfc.nasa.gov/cgi-bin/mirador/presentNavigation.pl?tree=project&project=TOMS
+
+also
+
+  ftp://acdisc.gsfc.nasa.gov/data/s4pa/Earth_Probe_TOMS_Level2/TOMSEPL2/
