@@ -33,11 +33,17 @@ SpiceDouble et;
 SpiceDouble state[6];
 SpiceDouble r, lat, lon;
 SpiceDouble dpr = dpr_c();
+int i;
 
   furnsh_c("naif0011.tls");
   getelm_c( 1996, 70, lines, &et0, elems);
   et2utc_c(et0,"ISOC",3,25, utc0);
   printf("\n%s\n%s\n%s\n\n", utc0, lines[0], lines[1]);
+
+  for (i=0; i<10; ++i) {
+    printf("%s%17.8e", (i%5) ? "" : "\n", elems[i]);
+  }
+  printf("%s", "\n\n");
 
   for ( deltaET=0.; deltaET<(225*60.); deltaET+=300) {
     et = et0 + deltaET;

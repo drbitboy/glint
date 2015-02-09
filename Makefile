@@ -23,7 +23,7 @@ all: $(EXES)
 test: all
 	for exe in $(EXES) ; do ./$$exe > $${exe#glint_}.out ; done
 	sum c.out f.out
-	diff c.out f.out -yW200 --suppress-c
+	diff c.out f.out -yW200 --suppress-c -i
 
 glint_f: glint_f.f
 	$(LINK.f) $^ $(FLIBS) -o $@

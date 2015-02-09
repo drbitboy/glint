@@ -29,6 +29,7 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
       call et2utc(et0, 'ISOC', 3, utc0)
       print'(/a23/a/a/a/)', utc0, lines
+      print'(/2(5(1pe17.8)/))', elems
 
       do deltaET=0,225 * 60 - 1,300
         et = et0 + deltaET
