@@ -7,7 +7,7 @@ Usage:
     Full-up script to create updated TOMS/EP HDF5 files:
 
 
-        find TOMSEPL2/1996/07/ -name '*.he5' | grep  '_glint\.he5$' | sort | xargs python tag.py
+        find TOMSEPL2/1996/07/ -name '*.he5' | grep -v '_glint\.he5$' | sort | xargs python tag.py
 
 
     Prototype:
