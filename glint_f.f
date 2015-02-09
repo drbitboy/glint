@@ -16,15 +16,13 @@ C     from http://naif.jpl.nasa.gov/pub/naif/toolkit_docs/FORTRAN/spicelib/ev2li
      & , 1D0                                     !! AE
      & /
 
-      doubleprecision mydpr,dpr
+      doubleprecision dpr
       external dpr
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
       lines(1) = '1 23940U 96037A   12341.93476993  '
      &        // '.00000273  00000-0  75967-4 0  1187'
       lines(2) = '2 23940 097.9131 164.1161 0029731 '
      &        // '023.1886 337.0617 14.53048997873601'
-
-      mydpr = dpr()
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
       call furnsh('naif0011.tls')
       call getelm(1996,lines,et0,elems)
@@ -37,6 +35,6 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
         call ev2lin(et,geophs,elems,state)
         call reclat(state,r,lat,lon)
         call et2utc(et,'ISOC',3,utc)
-        print'(a23,1x,f10.3,1x,f8.3,1x,f8.3)',utc,r,lat*mydpr,lon*mydpr
+        print'(a23,1x,f10.3,1x,f8.3,1x,f8.3)',utc,r,lat*dpr(),lon*dpr()
       enddo
       end
