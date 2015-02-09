@@ -55,7 +55,6 @@ Manifest
 
     README.md - this file
 
-tomsnew.he5
 
 SPICE Kernels
 -------------
