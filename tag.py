@@ -5,7 +5,7 @@ Add glint angle to TOMS (Total Ozone Mapping Spectrometer) HDF5 files
 
 Usage:
 
-  find TOMSEPL2/1996/07/ -name '*.he5' | grep  '_glint\.he5$' | sort | xargs python tag.py
+  find TOMSEPL2/1996/07/ -name '*.he5' | grep -v '_glint\.he5$' | sort | xargs python tag.py
 
 Dependencies:
 
