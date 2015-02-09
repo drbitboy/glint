@@ -15,7 +15,7 @@ static char lines[2][70] = { "1 23940U 96037A   12341.93476993  .00000273  00000
 
 // from http://naif.jpl.nasa.gov/pub/naif/toolkit_docs/FORTRAN/spicelib/ev2lin.html
 static SpiceDouble geophs[8] = { 1.082616e-3, -2.53881e-6, -1.65597e-6   // J2, J3, J4
-                               , .43669161e-2                            // KE
+                               , 7.43669161e-2                           // KE
                                , 120.0e0, 78.0e0                         // QO, SO
                                , 6378.135e0                              // ER
                                , 1.0                                     // AE

@@ -10,7 +10,7 @@
 C     from http://naif.jpl.nasa.gov/pub/naif/toolkit_docs/FORTRAN/spicelib/ev2lin.html
       doubleprecision geophs(8) /
      &   1.082616d-3, -2.53881d-6, -1.65597d-6   !! J2, J3, J4
-     & , .43669161d-2                            !! KE
+     & , 7.43669161d-2                           !! KE
      & , 120.0d0, 78.0d0                         !! QO, SO
      & , 6378.135d0                              !! ER
      & , 1D0                                     !! AE
